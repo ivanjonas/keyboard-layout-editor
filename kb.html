@@ -268,87 +268,75 @@ Nav Bar / Header
 
     <!-- PROPERTIES EDITOR -->
     <div id="properties" ng-class="{hidden:selTab!=0}">
-      <form class="form-horizontal col-sm-8 col-md-5 col-lg-5">
+      <form class="form-horizontal">
 
         <!-- Top Legend -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="labeleditor0">Top Legend:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline">
-              <kbd-label-editor label-index="0" hint-text="Specify a top-left legend for the keycap."></kbd-label-editor>
-              <kbd-label-editor label-index="1" hint-text="Specify a top-center legend for the keycap."></kbd-label-editor>
-              <kbd-label-editor label-index="2" hint-text="Specify a top-right legend for the keycap."></kbd-label-editor>
-            </div>
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="labeleditor0">Top Legend:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <kbd-label-editor label-index="0" hint-text="Specify a top-left legend for the keycap."></kbd-label-editor>
+            <kbd-label-editor label-index="1" hint-text="Specify a top-center legend for the keycap."></kbd-label-editor>
+            <kbd-label-editor label-index="2" hint-text="Specify a top-right legend for the keycap."></kbd-label-editor>
           </div>
         </div>
 
         <!-- Center Legend -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="labeleditor3">Center Legend:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline">
-              <kbd-label-editor label-index="3" hint-text="Specify a center-left legend for the keycap."></kbd-label-editor>
-              <kbd-label-editor label-index="4" hint-text="Specify a center legend for the keycap."></kbd-label-editor>
-              <kbd-label-editor label-index="5" hint-text="Specify a center-right legend for the keycap."></kbd-label-editor>
-            </div>
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="labeleditor3">Center Legend:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <kbd-label-editor label-index="3" hint-text="Specify a center-left legend for the keycap."></kbd-label-editor>
+            <kbd-label-editor label-index="4" hint-text="Specify a center legend for the keycap."></kbd-label-editor>
+            <kbd-label-editor label-index="5" hint-text="Specify a center-right legend for the keycap."></kbd-label-editor>
           </div>
         </div>
 
         <!-- Bottom Legend -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="labeleditor6">Bottom Legend:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline">
-              <kbd-label-editor label-index="6" hint-text="Specify a bottom-left legend for the keycap."></kbd-label-editor>
-              <kbd-label-editor label-index="7" hint-text="Specify a bottom-center legend for the keycap."></kbd-label-editor>
-              <kbd-label-editor label-index="8" hint-text="Specify a bottom-right legend for the keycap."></kbd-label-editor>
-            </div>
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="labeleditor6">Bottom Legend:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <kbd-label-editor label-index="6" hint-text="Specify a bottom-left legend for the keycap."></kbd-label-editor>
+            <kbd-label-editor label-index="7" hint-text="Specify a bottom-center legend for the keycap."></kbd-label-editor>
+            <kbd-label-editor label-index="8" hint-text="Specify a bottom-right legend for the keycap."></kbd-label-editor>
           </div>
         </div>
 
         <!-- Side-Print Legend -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="labeleditor9">Front Legend:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline">
-              <kbd-label-editor label-index="9" hint-text="Specify a front-left legend for the keycap."></kbd-label-editor>
-              <kbd-label-editor label-index="10" hint-text="Specify a front-center legend for the keycap."></kbd-label-editor>
-              <kbd-label-editor label-index="11" hint-text="Specify a front-right legend for the keycap."></kbd-label-editor>
-            </div>
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="labeleditor9">Front Legend:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <kbd-label-editor label-index="9" hint-text="Specify a front-left legend for the keycap."></kbd-label-editor>
+            <kbd-label-editor label-index="10" hint-text="Specify a front-center legend for the keycap."></kbd-label-editor>
+            <kbd-label-editor label-index="11" hint-text="Specify a front-right legend for the keycap."></kbd-label-editor>
           </div>
         </div>
 
         <!-- Legend Size -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="textSize-editor">Legend Size:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline hint--top hint--rounded"
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="textSize-editor">Legend Size:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <div class="hint--top hint--rounded"
                  data-hint="Specify the size for the keycap legends. Setting this value will change the size of all legends, and will replace any existing size overrides.">
-              <div class="form-group form-group-sm">
-                <input id="textSize-editor" class="form-control input-sm" style="max-width:64px" size="6" type='number' min="1" max="9"
-                       ng-model="multi.default.textSize"
-                       ng-change="updateMulti('textSize',-1)"
-                       ng-blur="validateMulti('textSize',-1)"
-                       ng-disabled="selectedKeys.length<1">
-              </div>
+              <input id="textSize-editor" class="form-control input-sm" style="max-width:64px" size="6" type='number' min="1" max="9"
+                     ng-model="multi.default.textSize"
+                     ng-change="updateMulti('textSize',-1)"
+                     ng-blur="validateMulti('textSize',-1)"
+                     ng-disabled="selectedKeys.length<1">
             </div>
           </div>
         </div>
 
         <!-- Legend Color -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="textcoloreditor">Legend Color:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline">
-              <kbd-color-picker picker-id="textcoloreditor" picker-position="top"
-                                ng-model="multi.default.textColor"
-                                ng-change="updateMulti('textColor',-1)"
-                                ng-blur="validateMulti('textColor',-1)"
-                                ng-disabled="selectedKeys.length<1"
-                                hint-text="Specify the color to use for the legend text on the selected keycaps.  Setting this value will change the color of all legends, and will replace any existing color overrides."
-                                ui-on-Drop="dropSwatch($data,$event,true,-1)" drop-channel="dragColor"></kbd-color-picker>
-              <div class="form-group form-group-sm color-name">{{colorName(multi.default.textColor)}}</div>
-            </div>
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="textcoloreditor">Legend Color:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <kbd-color-picker picker-id="textcoloreditor" picker-position="top"
+                              ng-model="multi.default.textColor"
+                              ng-change="updateMulti('textColor',-1)"
+                              ng-blur="validateMulti('textColor',-1)"
+                              ng-disabled="selectedKeys.length<1"
+                              hint-text="Specify the color to use for the legend text on the selected keycaps.  Setting this value will change the color of all legends, and will replace any existing color overrides."
+                              ui-on-Drop="dropSwatch($data,$event,true,-1)" drop-channel="dragColor"></kbd-color-picker>
+            <div class="form-group form-group-sm color-name">{{colorName(multi.default.textColor)}}</div>
 
             <!-- Swap Colors Button -->
             <div>
@@ -367,29 +355,27 @@ Nav Bar / Header
 
         <!-- Key Color -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="coloreditor">Key Color:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline">
-              <kbd-color-picker picker-id="coloreditor" picker-position="top"
-                                ng-model="multi.color"
-                                ng-change="updateMulti('color')"
-                                ng-blur="validateMulti('color')"
-                                ng-disabled="selectedKeys.length<1 || multi.decal"
-                                hint-text="Specify the color to use for the background of the selected keycaps."
-                                ui-on-Drop="dropSwatch($data,$event,false)" drop-channel="dragColor"></kbd-color-picker>
-              <div class="form-group form-group-sm color-name">{{colorName(multi.color)}}</div>
-            </div>
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="coloreditor">Key Color:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <kbd-color-picker picker-id="coloreditor" picker-position="top"
+                              ng-model="multi.color"
+                              ng-change="updateMulti('color')"
+                              ng-blur="validateMulti('color')"
+                              ng-disabled="selectedKeys.length<1 || multi.decal"
+                              hint-text="Specify the color to use for the background of the selected keycaps."
+                              ui-on-Drop="dropSwatch($data,$event,false)" drop-channel="dragColor"></kbd-color-picker>
+            <div class="form-group form-group-sm color-name">{{colorName(multi.color)}}</div>
           </div>
         </div>
 
         <!-- Width -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="width-editor">Width:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline hint--top hint--rounded"
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="width-editor">Width:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <div class="always-inline-form hint--top hint--rounded"
                  data-hint="Specify the primary and secondary widths for the keycap. The secondary width is used to specify the size of non-rectangular or stepped keys.">
               <kbd-multi-numbox field="width" size="6" min="0.5" max="18" step='{{sizeStep}}'></kbd-multi-numbox>
-              <div class="form-group form-group-sm"> / </div>
+              <span> / </span>
               <kbd-multi-numbox field="width2" size="6" min="0.5" max="18" step='{{sizeStep}}' kbd-disable="multi.decal"></kbd-multi-numbox>
             </div>
 
@@ -410,12 +396,12 @@ Nav Bar / Header
 
         <!-- Height -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="height-editor">Height:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline hint--top hint--rounded"
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="height-editor">Height:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <div class="always-inline-form hint--top hint--rounded"
                  data-hint="Specify the primary and secondary heights for the keycap. The secondary height is used to specify the size of non-rectangular or stepped keys.">
               <kbd-multi-numbox field="height" size="6" min="0.5" max="18" step='{{sizeStep}}'></kbd-multi-numbox>
-              <div class="form-group form-group-sm"> / </div>
+              <span> / </span>
               <kbd-multi-numbox field="height2" size="6" min="0.5" max="18" step='{{sizeStep}}' kbd-disable="multi.decal"></kbd-multi-numbox>
             </div>
           </div>
@@ -423,12 +409,12 @@ Nav Bar / Header
 
         <!-- X -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="x-editor">X:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline hint--top hint--rounded"
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="x-editor">X:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <div class="always-inline-form hint--top hint--rounded"
                  data-hint="Specify the X position of the keycap. An X-offset can also be specified to indicate how non-rectangular keys should be displayed.">
               <kbd-multi-numbox field="x" size="6" min="0" max="36" step='{{moveStep}}'></kbd-multi-numbox>
-              <div class="form-group form-group-sm"> + </div>
+              <span> + </span>
               <kbd-multi-numbox field="x2" size="6" min="-6" max="6" step='{{moveStep}}' kbd-disable="multi.decal"></kbd-multi-numbox>
             </div>
           </div>
@@ -436,12 +422,12 @@ Nav Bar / Header
 
         <!-- Y -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="y-editor">Y:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline hint--top hint--rounded"
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="y-editor">Y:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <div class="always-inline-form hint--top hint--rounded"
                  data-hint="Specify the Y position of the keycap. A Y-offset can also be specified to indicate how non-rectangular keys should be displayed.">
               <kbd-multi-numbox field="y" size="6" min="0" max="36" step='{{moveStep}}'></kbd-multi-numbox>
-              <div class="form-group form-group-sm"> + </div>
+              <span> + </span>
               <kbd-multi-numbox field="y2" size="6" min="-6" max="6" step='{{moveStep}}' kbd-disable="multi.decal"></kbd-multi-numbox>
             </div>
           </div>
@@ -449,14 +435,14 @@ Nav Bar / Header
 
         <!-- Rotation -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="rotation_angle-editor">Rotation:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline hint--top hint--rounded"
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="rotation_angle-editor">Rotation:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <div class="always-inline-form hint--top hint--rounded"
                  data-hint="Specify the angle (in degrees) by which to rotate the keycaps, and the x &amp; y coordinates of the center of rotation.">
               <kbd-multi-numbox field="rotation_angle" size="3" min="-180" max="180" step='{{rotateStep}}'></kbd-multi-numbox>
-              <div class="form-group form-group-sm"> &#176; </div>
+              <span> &#176; </span>
               <kbd-multi-numbox field="rotation_x" size="6" min="0" max="36" step='{{moveStep}}'></kbd-multi-numbox>
-              <div class="form-group form-group-sm"> , </div>
+              <span> , </span>
               <kbd-multi-numbox field="rotation_y" size="6" min="0" max="36" step='{{moveStep}}'></kbd-multi-numbox>
             </div>
           </div>
@@ -464,31 +450,29 @@ Nav Bar / Header
 
         <!-- Profile / Row -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="profileeditor-search">Profile / Row:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline hint--top hint--rounded"
-               data-hint="Specify the profile and (optionally) the row-number of the selected keys, e.g., 'DCS R1', 'DSA', 'DSA SPACE', etc.
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="profileeditor-search">Profile / Row:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <div class="always-inline-form hint--top hint--rounded"
+                 data-hint="Specify the profile and (optionally) the row-number of the selected keys, e.g., 'DCS R1', 'DSA', 'DSA SPACE', etc.
 
-               Supported profiles:
-               &nbsp;&bull; SA, DSA, DCS, OEM, CHICKLET
+              Supported profiles:
+              &nbsp;&bull; SA, DSA, DCS, OEM, CHICKLET
 
-               Supported rows:
-               &nbsp;&bull; R1, R2, R3, R4, R5, SPACE">
-              <div class="form-group form-group-sm">
-                <input id="profileeditor-search" class="form-control input-sm" size="24" type='text' autocomplete="off"
-                       ng-model="multi.profile"
-                       ng-change="updateMulti('profile')"
-                       ng-blur="validateMulti('profile')"
-                       ng-disabled="selectedKeys.length<1 || multi.decal">
-              </div>
+              Supported rows:
+              &nbsp;&bull; R1, R2, R3, R4, R5, SPACE">
+              <input id="profileeditor-search" class="form-control input-sm" size="24" type='text' autocomplete="off"
+                     ng-model="multi.profile"
+                     ng-change="updateMulti('profile')"
+                     ng-blur="validateMulti('profile')"
+                     ng-disabled="selectedKeys.length<1 || multi.decal">
             </div>
           </div>
         </div>
 
         <!-- Keyswitch options-->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap" for="switcheditor">Switch:</label>
-          <div class="form-inline form-outdent col-md-9 col-lg-9">
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap" for="switcheditor">Switch:</label>
+          <div class="always-inline-form property-values col-xs-12 col-sm-9">
 
           <!-- Keyswitch mount style-->
             <div class="hint--bottom hint--rounded" data-hint="Specify the mount style of switch for this key.">
@@ -534,14 +518,12 @@ Nav Bar / Header
 
         <!-- Misc -->
         <div class="form-group form-group-sm">
-          <label class="control-label col-md-3 col-lg-3 text-nowrap">Misc:</label>
-          <div class="col-md-9 col-lg-9">
-            <div class="form-inline">
-              <kbd-multi-check field="ghost" kbd-disable="multi.decal" hint-text="Specify whether the selected keys should be rendered slightly transparently; this is useful to draw attention to the other, non-ghosted keycaps.">Ghosted</kbd-multi-check>
-              <kbd-multi-check field="stepped" kbd-disable="multi.decal" hint-text="Specify whether the selected keys are 'stepped', i.e., part of the key is at a lower height than the rest.  The secondary 'width' indicates the width of the stepped part.">Stepped</kbd-multi-check>
-              <kbd-multi-check field="nub" kbd-disable="multi.decal" hint-text="Specifies that the selected keys are 'homing' keys, which help the user find the home-row by touch alone.">Homing</kbd-multi-check>
-              <kbd-multi-check field="decal" hint-text="Specifies that the selected keys are to be treated as 'decals', i.e., purely decorative additions to the layout.">Decal</kbd-multi-check>
-            </div>
+          <label class="property-label col-xs-12 col-sm-3 control-label text-nowrap">Misc:</label>
+          <div class="property-values col-xs-12 col-sm-9">
+            <kbd-multi-check field="ghost" kbd-disable="multi.decal" hint-text="Specify whether the selected keys should be rendered slightly transparently; this is useful to draw attention to the other, non-ghosted keycaps.">Ghosted</kbd-multi-check>
+            <kbd-multi-check field="stepped" kbd-disable="multi.decal" hint-text="Specify whether the selected keys are 'stepped', i.e., part of the key is at a lower height than the rest.  The secondary 'width' indicates the width of the stepped part.">Stepped</kbd-multi-check>
+            <kbd-multi-check field="nub" kbd-disable="multi.decal" hint-text="Specifies that the selected keys are 'homing' keys, which help the user find the home-row by touch alone.">Homing</kbd-multi-check>
+            <kbd-multi-check field="decal" hint-text="Specifies that the selected keys are to be treated as 'decals', i.e., purely decorative additions to the layout.">Decal</kbd-multi-check>
           </div>
         </div>
 
@@ -1126,8 +1108,8 @@ Angular Templates
 
 <!-- Color Picker Template -->
 <script type="text/ng-template" id="colorPicker.html">
-  <div class="form-group form-group-sm">
-    <div class="input-group input-group-sm hint--top hint--rounded" ng-attr-data-hint="{{hintText}}">
+    <div class="labelEditorCluster input-group input-group-sm hint--top hint--rounded" ng-attr-data-hint="{{hintText}}"
+         ui-on-Drop="$parent.dropSwatch($data,$event,true,labelIndex)" drop-channel="dragColor">
       <input id="{{pickerId}}" class="form-control" size="8" type='text'
              ng-model="color" ng-change="onChange()" ng-blur="onBlur()" ng-disabled="isDisabled &amp;&amp; isDisabled()"
              colorpicker="hex" colorpicker-close-on-select="true" colorpicker-position="{{pickerPosition || 'bottom'}}">
@@ -1135,41 +1117,42 @@ Angular Templates
         <button class="btn btn-default" ng-style="{'background-color':color}" ng-model="color" ng-change="onChange()" ng-disabled="isDisabled &amp;&amp; isDisabled()"
                 colorpicker="hex" colorpicker-close-on-select="true" colorpicker-position="{{pickerPosition || 'bottom'}}">&nbsp;</button>
       </span>
+      <input id="textsizeeditor{{labelIndex}}" class="form-control input-sm" size="4" type='number' min="1" max="9"
+             ng-model="$parent.multi.textSize[labelIndex]"
+             ng-change="$parent.updateMulti('textSize',labelIndex)"
+             ng-blur="$parent.validateMulti('textSize',labelIndex)"
+             style="max-width:32px;visibility:hidden">
     </div>
   </div>
 </script>
 
 <!-- Simple Editor Templates -->
 <script type="text/ng-template" id="multiCheck.html">
-  <div class="form-group form-group-sm">
-    <div class="checkbox hint--top hint--rounded" ng-attr-data-hint="{{hintText}}">
-      <label>
-        <input id="{{field}}" type="checkbox"
-               ng-model="$parent.multi[field]"
-               ng-change="$parent.updateMulti(field)"
-               ng-blur="$parent.validateMulti(field)"
-               ng-disabled="$parent.selectedKeys.length<1 || kbdDisable">
-        <span ng-transclude></span>
-      </label>
-    </div>
+  <div class="checkbox hint--top hint--rounded" ng-attr-data-hint="{{hintText}}">
+    <label>
+      <input id="{{field}}" type="checkbox"
+             ng-model="$parent.multi[field]"
+             ng-change="$parent.updateMulti(field)"
+             ng-blur="$parent.validateMulti(field)"
+             ng-disabled="$parent.selectedKeys.length<1 || kbdDisable">
+      <span ng-transclude></span>
+    </label>
   </div>
 </script>
 
 <script type="text/ng-template" id="multiNumbox.html">
-  <div class="form-group form-group-sm">
-    <input id="{{field}}-editor" class="form-control input-sm" size="{{size}}" type='number' min="{{min}}" max="{{max}}" step="{{step || 1}}"
-           ng-model="$parent.multi[field]"
-           ng-change="$parent.updateMulti(field)"
-           ng-blur="$parent.validateMulti(field)"
-           ng-disabled="$parent.selectedKeys.length<1 || kbdDisable"
-           style="max-width:80px">
-  </div>
+  <input id="{{field}}-editor" class="form-control input-sm" size="{{size}}" type='number' min="{{min}}" max="{{max}}" step="{{step || 1}}"
+         ng-model="$parent.multi[field]"
+         ng-change="$parent.updateMulti(field)"
+         ng-blur="$parent.validateMulti(field)"
+         ng-disabled="$parent.selectedKeys.length<1 || kbdDisable"
+         style="max-width:80px">
 </script>
 
 <!-- Label Editor Template -->
 <script type="text/ng-template" id="labelEditor.html">
-  <div class="form-group form-group-sm">
-    <div class="input-group input-group-sm hint--top hint--rounded" ng-attr-data-hint="{{hintText}}"
+  <div>
+    <div class="labelEditorCluster input-group input-group-sm hint--top hint--rounded" ng-attr-data-hint="{{hintText}}"
          ui-on-Drop="$parent.dropSwatch($data,$event,true,labelIndex)" drop-channel="dragColor">
       <input id="labeleditor{{labelIndex}}" class="form-control" size="6" type='text'
              ng-model="$parent.multi.labels[labelIndex]"

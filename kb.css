@@ -230,6 +230,26 @@ for i in (1..9) {
 }
 #properties.row { padding-left: 30px; }
 
+/* Properties */
+.property-label {
+  width: 190px;
+  /* outline: 1px solid red; */
+}
+.property-values {
+  /* outline: 1px solid blue; */
+}
+.labelEditorCluster {
+  display: inline-table;
+  vertical-align: middle;
+}
+.labelEditorCluster > * {
+  width: auto;
+}
+kbd-label-editor,
+.always-inline-form > * {
+  display: inline-block;
+}
+
 /* Tooltip modifications */
 .hint--rounded:after { width: 300px; }
 .hint:after, [data-hint]:after { white-space: pre-line; }
